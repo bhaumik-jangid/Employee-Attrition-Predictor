@@ -89,7 +89,7 @@ try:
     print("\n--- Starting Model Training ---")
 
     print("\nTraining Logistic Regression Model...")
-    log_reg_model = LogisticRegression(random_state=42, solver='liblinear')
+    log_reg_model = LogisticRegression(random_state=42, solver='liblinear', class_weight='balanced') # ADD THIS PARAMETER
     log_reg_model.fit(X_train, y_train)
     print("Logistic Regression Model Trained.")
 

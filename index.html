@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attrition Predictor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="container bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Employee Attrition Predictor</h1>
+        <p class="text-center text-gray-600 mb-8">Enter employee details to predict likelihood of attrition.</p>
+
+        <div class="space-y-4">
+            <div>
+                <label for="monthlyIncome" class="block text-gray-700 text-sm font-semibold mb-2">Monthly Income:</label>
+                <input type="number" id="monthlyIncome" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., 5000" min="0">
+            </div>
+
+            <div>
+                <label for="age" class="block text-gray-700 text-sm font-semibold mb-2">Age:</label>
+                <input type="number" id="age" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., 30" min="18" max="65">
+            </div>
+
+            <div>
+                <label for="jobSatisfaction" class="block text-gray-700 text-sm font-semibold mb-2">Job Satisfaction (1-4):</label>
+                <input type="number" id="jobSatisfaction" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., 3" min="1" max="4">
+            </div>
+
+            <div>
+                <label for="yearsAtCompany" class="block text-gray-700 text-sm font-semibold mb-2">Years at Company:</label>
+                <input type="number" id="yearsAtCompany" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., 5" min="0">
+            </div>
+
+            <div>
+                <label for="overTime" class="block text-gray-700 text-sm font-semibold mb-2">OverTime:</label>
+                <select id="overTime" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <button id="predictButton" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
+                Predict Attrition
+            </button>
+        </div>
+
+        <div id="result" class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200 text-center text-lg font-semibold text-blue-800 hidden">
+        </div>
+
+        <div id="messageBox" class="mt-4 p-3 bg-red-100 rounded-lg border border-red-300 text-center text-sm text-red-700 hidden">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 480px; 
+}
+
+button:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+input[type="number"],
+select {
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #3b82f6; 
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); 
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 1.5rem;
+        margin: 1rem; 
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
